@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Josefin_Sans } from "next/font/google";
+import "@fortawesome/fontawesome-free/css/all.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
+import { Navbar } from "./_Component/Navbar/Navbar";
+import Footer from "./_Component/Footer/Footer";
+import { Toaster } from "@/components/ui/sonner"
+import UserProvider from './../UserProvider';
+import CountProvider from "@/CountProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const Josefin_SansFont = Josefin_Sans({
   subsets: ["latin"],
-});
+  weight:['100','400', '700']
+})
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +30,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${Josefin_SansFont.className}`}
+        
       >
-        {children}
+
+        <CountProvider>
+        <UserProvider>
+          <Navbar/>
+        <main className=" p-5">
+          {children}
+        </main>
+        <Toaster/>
+
+
+        <Footer/>
+        </UserProvider>
+        </CountProvider>
       </body>
     </html>
   );

@@ -18,7 +18,7 @@ export default function useCheckoutsession() {
       city:z.string().nonempty('city is required'),
   
     })
-  const {Cartid}:{Cartid:string} = useParams()
+  const {cartid}:{cartid:string} = useParams()
   const useShippingForm = useForm<z.infer<typeof schemaPayment>>({
     defaultValues: {
        details: "",
@@ -29,7 +29,7 @@ export default function useCheckoutsession() {
 })
   async function checkOutSessionPayment(values:z.infer<typeof schemaPayment>) {
     console.log(values);
-    const data = await CheckOutPayment(Cartid, values)
+    const data = await CheckOutPayment(cartid, values)
     window.location.href = data.session.url
     //window.open(data.session.url)
     

@@ -8,6 +8,7 @@ import React, { useEffect, useState } from 'react'
 import { wish, WishData } from '@/types/wishlist.type'
 import AddCartBtn from '@/app/_Component/ProductCard/AddCartBtn'
 import { toast } from 'sonner'
+import { product } from '@/types/product.type';
 
 export default function WishList() {
   const [wish, setWish] = useState<wish[]>([])
@@ -30,8 +31,9 @@ export default function WishList() {
 
     <div className="p-6">
        <h1 className=' text-orange-600 text-2xl my-7  ml-5 font-bold  '><i className="fa-solid fa-heart"></i> WISH LIST</h1>
-      <table className="w-full border-collapse">
-        <thead>
+    
+      {wish.length && wish.length > 0 ? (<>
+       <thead>
            <tr className="border-b text-left">
             <th className="p-3"></th>
             <th className="p-3">Product Name</th>
@@ -39,7 +41,9 @@ export default function WishList() {
             <th className="p-3">Stock Status</th>
             <th className="p-3">Actions</th>
           </tr>
-        </thead>
+        </thead></>) : (<p className="text-gray-500 font-semibold  relative top-50 text-center  ">Wish List is empty</p>)}
+      <table className="w-full border-collapse">
+       
        <tbody>
   {wish.map((item) => (
     <tr key={item._id} className="border-b">

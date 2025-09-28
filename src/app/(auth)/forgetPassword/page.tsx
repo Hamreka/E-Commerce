@@ -54,11 +54,11 @@ export default function ForgetPassword() {
     
   }
   return (
-    <div className='w-3/4 m-auto grid grid-cols-12 pt-15'>
-      <div className='col-span-7'>
+    <div className='w-3/4 m-auto grid lg:grid-cols-12 md:grid-cols-6 sm:grid-cols-4 pt-15'>
+      <div className='col-span-6'>
         <Image src='/images/sign.png'alt='signphoto' width={1500} height={100} />
       </div>
-      <div className='col-span-5 mx-10'>
+      <div className='col-span-6 mx-10'>
         <h1 className='text-3xl text-orange-500 text-center py-5'>Send Email</h1>
         <Form {...ForgetPassForm}>
           <form className="space-y-2" onSubmit={ForgetPassForm.handleSubmit(handleForgetPass)}>

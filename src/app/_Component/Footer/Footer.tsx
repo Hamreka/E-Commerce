@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button'
-import { Link } from 'lucide-react'
 import React from 'react'
 
 export default function Footer() {
@@ -31,8 +30,7 @@ export default function Footer() {
     <div className="flex flex-wrap items-center md:justify-between justify-center">
       <div className="w-full md:w-4/12 px-4 mx-auto text-center">
         <div className="text-sm text-blueGray-500 font-semibold py-1">
-          Copyright © <span id="get-current-year">2025</span><Link href="https://www.github.com/Hamreka" className="text-blueGray-500 hover:text-gray-800" target="_blank"> by Amr Mazied
-          </Link>
+          Copyright-2025 © By AmrMaziedBadawi
         </div>
       </div>
     </div>

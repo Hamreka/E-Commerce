@@ -82,7 +82,7 @@ export function Navbar() {
             </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink>
-            <span onClick={logout}><i class="fa-solid fa-right-from-bracket"></i></span>
+            <span onClick={logout}><i className="fa-solid fa-right-from-bracket"></i></span>
             </NavigationMenuLink>
             </NavigationMenuItem>
         

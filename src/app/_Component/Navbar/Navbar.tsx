@@ -23,7 +23,7 @@ import { CountContext } from "@/CountProvider"
 
 export function Navbar() {
   const [checked, setChecked] = useState(false)
-  const [isOpen, setIsOpen] = useState(false) // للتحكم في المنيو بالموبايل
+  const [isOpen, setIsOpen] = useState(false) 
   const CountData = useContext(CountContext)
   const { data, status } = useSession()
 
@@ -92,7 +92,7 @@ export function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link href={"/cart"} className="relative">
-                      {CountData?.count > 0 && (
+                      {CountData.count > 0 && (
                         <span className="absolute -top-1 -left-1 bg-orange-400 w-4 h-4 rounded-full flex justify-center items-center text-xs">
                           {CountData?.count}
                         </span>

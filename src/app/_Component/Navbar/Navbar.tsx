@@ -92,7 +92,7 @@ export function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link href={"/cart"} className="relative">
-                      {CountData.count > 0 && (
+                      {Number(CountData?.count) > 0 && (
                         <span className="absolute -top-1 -left-1 bg-orange-400 w-4 h-4 rounded-full flex justify-center items-center text-xs">
                           {CountData?.count}
                         </span>

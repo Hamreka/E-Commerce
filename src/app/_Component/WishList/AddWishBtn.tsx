@@ -13,7 +13,7 @@ export default function AddWishBtn({ id }: { id: string }) {
     const fetchWishlist = async () => {
       try {
         const data = await getWishData()
-        setWishlist(data.data.map((item: any) => item._id || item.id))
+        setWishlist(data.data.map((item) => item._id || item.id))
       } catch (err) {
         console.log("Not logged in or error:", err)
       }

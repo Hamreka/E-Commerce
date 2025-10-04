@@ -19,7 +19,7 @@ import AddWishBtn from '../WishList/AddWishBtn';
 export default function ProductCard({ product }: { product:product }) {
     const {category:{name} ,imageCover ,ratingsAverage, title , price ,_id }= product
   return (
-    <Card className=' rounded-none border-1 border-orange-500 rounded-none hover:shadow-xl  hover:shadow-orange-500  transition-shadow duration-500 cursor-pointer'>
+    <Card className=' border-1 border-orange-500 rounded-none hover:shadow-md  hover:shadow-orange-500  transition-shadow duration-500 cursor-pointer dark:bg-gray-700   dark:border-white dark:hover:shadow-white'>
      
       <Link href={'/products/'+ _id}>
         <CardHeader>

@@ -94,7 +94,7 @@ export default function Cart() {
               <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
          
              <div className="space-y-6"  >
-          <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6 hover:shadow-lg hover:shadow-orange-500  transition-shadow duration-500">
+          <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6 hover:shadow-md hover:shadow-orange-500  transition-shadow duration-500 dark:hover:shadow-white">
             <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
               <Image src={item.product.imageCover} alt={item.product.title} width={100} height={100} />
                     <label htmlFor="counter-input" className="sr-only">{ item.product.quantity}</label>

@@ -55,7 +55,7 @@ export default function WishList() {
       </td>
 
       <td className="p-3">
-        <span className="text-black">{item.price} LE</span>
+        <span className="text-black dark:text-white">{item.price} LE</span>
       </td>
 
       <td className="p-3">

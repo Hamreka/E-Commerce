@@ -21,6 +21,6 @@ export default function AddCartBtn({ id }: { id: string }) {
     }
 
     return (
-        <Button onClick={()=>{AddProToCartBridge(id)}} className=" bg-black w-full rounded-none cursor-pointer">Add To Cart</Button>
+        <Button onClick={()=>{AddProToCartBridge(id)}} className=" bg-black w-full rounded-none cursor-pointer dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500">Add To Cart</Button>
     )
 }

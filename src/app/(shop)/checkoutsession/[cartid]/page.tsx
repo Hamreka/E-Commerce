@@ -36,11 +36,11 @@ export default function useCheckoutsession() {
     
   }
   return <>
-     <div className='w-3/4 m-auto grid grid-cols-12 mt-15'>
-          <div className='col-span-7'>
+     <div className='w-3/4 m-auto grid lg:grid-cols-12 md:grid-cols-6 sm:grid-cols-4 mt-15'>
+          <div className='col-span-6'>
             <Image src='/images/checkout.jpg'alt='signphoto' width={1500} height={100} />
           </div>
-          <div className='col-span-5 mx-10 mt-15'>
+          <div className='col-span-6 mx-10 mt-15'>
             <h1 className='text-3xl text-orange-500 text-center pb-5'>Check Out Payment</h1>
           <Form {...useShippingForm}>
         <form onSubmit={useShippingForm.handleSubmit(checkOutSessionPayment)}>
